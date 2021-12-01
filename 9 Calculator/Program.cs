@@ -11,6 +11,7 @@ namespace _9_Calculator
         static void Main(string[] args)
         {
             int x, y, choice;
+            x = y = choice = 0;
             Console.WriteLine("Вас приветствует калькулятор.");
             Console.Write("Введите целое число X=");
             try
@@ -78,7 +79,6 @@ namespace _9_Calculator
             {
                 Console.WriteLine(ex.Message);
             }
-            
             Console.ReadKey();
         }
     }
