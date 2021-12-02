@@ -21,6 +21,8 @@ namespace _9_Calculator
             catch (Exception ex)
             {
                 Console.WriteLine("Ошибка! {0}", ex.Message);
+                Console.ReadKey();
+                return;
             }
             Console.Write("Введите целое число Y=");
             try
@@ -30,6 +32,8 @@ namespace _9_Calculator
             catch (Exception ex)
             {
                 Console.WriteLine("Ошибка! {0}", ex.Message);
+                Console.ReadKey();
+                return;
             }
             Console.WriteLine("Введите код операции:\n\t1-сложение\n\t2-вычитание\n\t3-произведение\n\t4-частное");
             Console.Write("Ваш выбор: ");
@@ -40,10 +44,14 @@ namespace _9_Calculator
             catch when (choice < 1 || choice > 4)
             {
                 Console.WriteLine("Нет операции с указанным номером");
+                Console.ReadKey();
+                return;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.ReadKey();
+                return;
             }
             try
             {
@@ -78,6 +86,8 @@ namespace _9_Calculator
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.ReadKey();
+                return;
             }
             Console.ReadKey();
         }
